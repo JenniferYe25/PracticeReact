@@ -18,20 +18,44 @@ export default function Game() {
 
   // handle picking random chest
   var handleOpenChest = () => {
-    // set random chest to true
-    // should only be able to open one
+    // set random chest to true if none are already
+    let anyTrue = chests.includes(true);
+    if (!anyTrue) {
+      let newChests = [...chests];
+      newChests[Math.floor(Math.random() * newChests.length)] = true;
+    }
   };
 
   // play again (reset chests)
   var handleCloseChest = () => {
-    // set all chests
+    // set all chests to false
+    let falseChests = new Array(9).fill(false);
+    setChests(falseChests);
+  };
+
+  // return row of chests
+  var returnChests = (n) => {
+    for (let i = n; i < n + 3; i++) {
+      return (
+        <td>
+          <Chest opened={chests[i]} chestNumber={i} />
+        </td>
+      );
+    }
   };
 
   return (
     <>
-      <Chest opened={chests[0]} chestNumber={0} />
+      <div className="table-div">
+        <table>
+          <tr>{returnChests(0)}</tr>
+          <tr>{returnChests(3)}</tr>
+          <tr>{returnChests(6)}</tr>
+        </table>
+      </div>
+
       <div className="button-div">
-        <Buttons openChest={handleOpenChest} />
+        <Buttons openChest={handleOpenChest} closeChest={handleCloseChest} />
       </div>
     </>
   );
