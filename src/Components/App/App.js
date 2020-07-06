@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Game from "../Game/Game.js"; // for some reason /Game doesnt work
+import Game from "../Game";
 import Homepage from "../Homepage";
 import "./App.css";
 
