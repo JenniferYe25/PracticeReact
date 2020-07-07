@@ -4,17 +4,7 @@ import Chest from "../Chest";
 
 export default function Game() {
   // chest opened state
-  const [chests, setChests] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [chests, setChests] = useState(new Array(9).fill(false));
 
   // handle picking random chest
   var handleOpenChest = () => {
@@ -35,13 +25,15 @@ export default function Game() {
 
   // return row of chests
   var returnChests = (n) => {
+    let chest_comps = [];
     for (let i = n; i < n + 3; i++) {
-      return (
+      chest_comps.push(
         <td>
           <Chest opened={chests[i]} chestNumber={i} />
         </td>
       );
     }
+    return chest_comps;
   };
 
   return (
