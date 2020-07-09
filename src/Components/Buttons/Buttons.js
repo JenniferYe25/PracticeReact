@@ -14,9 +14,6 @@ export default function Buttons ({openChest}, {closeChest}) {
   );
  }
 
-
-
-
   // handle click function
 
   // start button (handleOpenChests)
