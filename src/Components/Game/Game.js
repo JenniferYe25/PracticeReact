@@ -5,7 +5,6 @@ import Chest from "../Chest";
 export default function Game() {
   // chest opened state
   const [chests, setChests] = useState(new Array(9).fill(false));
-
   // handle picking random chest
   var handleOpenChest = () => {
     // set random chest to true if none are already
