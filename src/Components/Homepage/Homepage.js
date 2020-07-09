@@ -16,7 +16,7 @@ export default function Homepage() {
       <button
         id="start"
         className="btn btn-lg btn-danger"
-        onClick={}
+        // onClick={}
       >
         Start
       </button>
