@@ -1,0 +1,30 @@
+#background {
+  width: auto;
+  height: 100%;
+  z-index: -10;
+}
+
+h1 {
+  color: white;
+  position: absolute;
+}
+
+h1 span {
+  background-color: yellow;
+  padding: 10px;
+}
+
+#flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#start {
+  font-size: 30px;
+  position: absolute;
+}
+
+#title {
+  display: contents;
+}

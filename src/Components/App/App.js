@@ -4,7 +4,7 @@ import Homepage from "../Homepage";
 import "./App.css";
 
 function App() {
-  const [showGame, setShowGame] = useState(true);
+  const [showGame, setShowGame] = useState(false);
 
   // handle showgame
   var handleShowGame = () => {
