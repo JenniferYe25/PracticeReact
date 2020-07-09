@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { RemoveScrollBar } from "react-remove-scroll-bar";
-import "bootstrap/dist/css/bootstrap.css";
 import "./Homepage.css";
 
-export default function Homepage() {
+export default function Homepage({ showGame }) {
   // play button (change showGame state)
   return (
     <div id="flex">
@@ -13,11 +12,7 @@ export default function Homepage() {
           <span>Treasure Chest Randomizer</span>
         </h1>
       </div>
-      <button
-        id="start"
-        className="btn btn-lg btn-danger"
-        // onClick={}
-      >
+      <button id="start" className="btn btn-lg btn-danger" onClick={showGame}>
         Start
       </button>
       <img id="background" src="/background.jpg" />
