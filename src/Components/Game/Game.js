@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Buttons from "../Buttons";
 import Chest from "../Chest";
+import "./Game.css";
 
 export default function Game() {
   // chest opened state
   const [chests, setChests] = useState(new Array(9).fill(false));
+
   // handle picking random chest
   var handleOpenChest = () => {
     // set random chest to true if none are already
@@ -12,6 +14,7 @@ export default function Game() {
     if (!anyTrue) {
       let newChests = [...chests];
       newChests[Math.floor(Math.random() * newChests.length)] = true;
+      setChests(newChests);
     }
   };
 
@@ -27,8 +30,8 @@ export default function Game() {
     let chest_comps = [];
     for (let i = n; i < n + 3; i++) {
       chest_comps.push(
-        <td>
-          <Chest opened={chests[i]} chestNumber={i} />
+        <td key={i + 10}>
+          <Chest key={i} opened={chests[i]} chestNumber={i} />
         </td>
       );
     }
@@ -39,9 +42,11 @@ export default function Game() {
     <>
       <div className="table-div">
         <table>
-          <tr>{returnChests(0)}</tr>
-          <tr>{returnChests(3)}</tr>
-          <tr>{returnChests(6)}</tr>
+          <tbody>
+            <tr>{returnChests(0)}</tr>
+            <tr>{returnChests(3)}</tr>
+            <tr>{returnChests(6)}</tr>
+          </tbody>
         </table>
       </div>
 
