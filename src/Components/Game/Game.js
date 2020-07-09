@@ -3,7 +3,7 @@ import Buttons from "../Buttons";
 import Chest from "../Chest";
 import "./Game.css";
 
-export default function Game() {
+export default function Game({ showGame }) {
   // chest opened state
   const [chests, setChests] = useState(new Array(9).fill(false));
 
@@ -51,7 +51,7 @@ export default function Game() {
       </div>
 
       <div className="button-div">
-        <Buttons openChest={handleOpenChest} closeChest={handleCloseChest} />
+        <Buttons openChest={handleOpenChest} closeChest={handleCloseChest} showGame={showGame} />
       </div>
     </>
   );
