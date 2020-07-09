@@ -1,5 +1,25 @@
-.button{
+.show{
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute; 
     display: flex;
-    position: relative;
+    color: white;
     justify-content: center;
+    width: 200px;
+    background: rgb(230, 80, 66);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hide{
+    position: absolute; 
+    visibility: hidden;
+}
+
+#quit{
+    position: absolute; 
+    font-size: 20px;
+    color: black;
+    left: 80%;
+    transform: translate(-50%, -50%);
 }

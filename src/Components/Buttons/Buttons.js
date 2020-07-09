@@ -1,21 +1,23 @@
-import React from "react";
-// import Game from "../Game";
+import React, {useState} from "react";
 import "./Buttons.css";
 
-export default function Buttons ({openChest}, {closeChest}) {
+export default function Buttons ({openChest, closeChest, showGame}) {
 
+ const [Play, setPlay] = useState(false);
 
+ // determines whether to hide or show Play button
+   const PlayButton = () => {
+     setPlay(!Play);
+   }
+
+   // display Play button or Play Again button
   return (
-    <div className = "button">
-        <button onClick={openChest}>Play</button>
-        <button onClick={closeChest}>Play Again</button> 
-    </div>
+    <div> 
     
-  );
- }
-
-  // handle click function
-
-  // start button (handleOpenChests)
-  // quit button (), play again button (together)
-  // <button onClick={handleCloseChest}>Play Again</button>  
+    <button className={Play ? "hide" : "show"} onClick={() => {openChest();PlayButton();}}>Play</button>
+    <button className={Play ? "show" : "hide"} onClick={() => {closeChest();PlayButton();}}>Play Again</button>
+    <button id="quit" onClick={showGame}>Quit</button>
+    
+    </div>
+    );
+  }
