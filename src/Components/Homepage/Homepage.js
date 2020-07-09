@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { RemoveScrollBar } from "react-remove-scroll-bar";
 import "./Homepage.css";
 
@@ -15,7 +15,7 @@ export default function Homepage({ showGame }) {
       <button id="start" className="btn btn-lg btn-danger" onClick={showGame}>
         Start
       </button>
-      <img id="background" src="/background.jpg" />
+      <img id="background" src="/background.jpg" alt="backgroundImg" />
     </div>
   );
 }
