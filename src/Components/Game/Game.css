@@ -5,3 +5,7 @@ table {
 .table-div {
   margin: auto;
 }
+
+body {
+  background: url(background.png);
+}
