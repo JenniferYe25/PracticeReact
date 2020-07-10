@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Game from "../Game";
 import Homepage from "../Homepage";
-import "./App.css";
 
 function App() {
   const [showGame, setShowGame] = useState(false);
@@ -14,7 +13,13 @@ function App() {
 
   // display homepage or game
   return (
-    <>{showGame ? <Game showGame={handleShowGame} /> : <Homepage showGame={handleShowGame} />}</>
+    <>
+      {showGame ? (
+        <Game showGame={handleShowGame} />
+      ) : (
+        <Homepage showGame={handleShowGame} />
+      )}
+    </>
   );
 }
 
