@@ -7,7 +7,7 @@ export default function Homepage({ showGame }) {
   return (
     <div id="flex">
       <RemoveScrollBar />
-      <div>
+      <div id="title">
         <h1 className="text-center">
           <span>Treasure Chest Randomizer</span>
         </h1>
