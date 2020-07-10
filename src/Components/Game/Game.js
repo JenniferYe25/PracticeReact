@@ -51,7 +51,11 @@ export default function Game({ showGame }) {
       </div>
 
       <div className="button-div">
-        <Buttons openChest={handleOpenChest} closeChest={handleCloseChest} showGame={showGame} />
+        <Buttons
+          openChest={handleOpenChest}
+          closeChest={handleCloseChest}
+          showGame={showGame}
+        />
       </div>
     </>
   );
