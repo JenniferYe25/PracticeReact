@@ -7,13 +7,12 @@
     font-size: 20px;
     position: absolute;
     left: 50%;
-    top: 65%;
-    transform: translate(-50%, -50%);
+    top: 70%;
 }
 
 #quit{
     position: absolute; 
     font-size: 20px;
     left: 70%;
-    transform: translate(-50%, -50%);
+    top: 70%;
 }
