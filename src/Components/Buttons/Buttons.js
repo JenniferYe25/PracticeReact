@@ -16,7 +16,7 @@ export default function Buttons ({openChest, closeChest, showGame}) {
     
     <button id="flexx" className={Play ? "hide" : "btn btn-success"} onClick={() => {openChest();PlayButton();}}>Play</button>
     <button id="flexx" className={Play ? "btn btn-success" : "hide"} onClick={() => {closeChest();PlayButton();}}>Play Again</button>
-    <button id="quit" className="btn btn-outline-success" onClick={showGame}>Quit</button>
+    <button id="quit" className="btn btn-warning" onClick={showGame}>Quit</button>
     
     </div>
     );

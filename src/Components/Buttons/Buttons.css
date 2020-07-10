@@ -4,13 +4,13 @@
 }
 
 #flexx{
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
-    left: 50%;
+    left: 48%;
 }
 
 #quit{
     position: absolute; 
-    font-size: 20px;
+    font-size: 30px;
     left: 60%;
 }
