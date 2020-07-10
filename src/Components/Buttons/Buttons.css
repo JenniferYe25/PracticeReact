@@ -7,12 +7,10 @@
     font-size: 20px;
     position: absolute;
     left: 50%;
-    top: 70%;
 }
 
 #quit{
     position: absolute; 
     font-size: 20px;
-    left: 70%;
-    top: 70%;
+    left: 80%;
 }
