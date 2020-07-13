@@ -1,16 +1,16 @@
 .hide {
-  position: absolute;
   visibility: hidden;
 }
 
 #flexx {
   position: absolute;
   left: 48%;
-  font-size: 30px;
+  font-size: 25px;
+  width: 100px;
 }
 
 #quit {
   position: absolute;
   left: 60%;
-  font-size: 30px;
+  font-size: 25px;
 }
